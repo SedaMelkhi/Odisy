@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { BracketSvg } from "../../../assets/svg";
+
 import styles from "./menuItem.module.css";
 
 const variants = {
@@ -18,19 +21,14 @@ const variants = {
   },
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
-
-export const MenuItem = ({ i }) => {
-  const style = { border: `2px solid ${colors[i]}` };
+export const MenuItem = ({ item }) => {
   return (
-    <motion.li
-      variants={variants}
-      className={styles.item}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <div className={styles.icon_placeholder} style={style} />
-      <div className={styles.text_placeholder} style={style} />
+    <motion.li variants={variants} className={styles.item}>
+      <Link to={item.link} className={styles.flex}>
+        <BracketSvg />
+        <span>{item.text}</span>
+        <BracketSvg className={styles.right} />
+      </Link>
     </motion.li>
   );
 };

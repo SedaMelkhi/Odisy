@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { MenuItem } from "../menuItem/menuItem";
 
+import { CloseSvg } from "../../../assets/svg";
+
 import styles from "./NavContent.module.css";
 
 const variants = {
@@ -12,12 +14,62 @@ const variants = {
   },
 };
 
-export const NavContent = () => (
-  <motion.ul variants={variants} className={styles.menu}>
-    {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
-    ))}
-  </motion.ul>
-);
+const variants2 = {
+  open: {
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+};
 
-const itemIds = [0, 1, 2, 3, 4];
+const menuItems = [
+  {
+    text: "Commercials",
+    link: "/commercials",
+  },
+  {
+    text: "Features",
+    link: "/features",
+  },
+  {
+    text: "Doc",
+    link: "/doc",
+  },
+  {
+    text: "Creative",
+    link: "/creative",
+  },
+  {
+    text: "Education",
+    link: "/education",
+  },
+  {
+    text: "Contacts",
+    link: "/contacts",
+  },
+];
+
+export const NavContent = ({ toggleOpen }) => (
+  <>
+    <motion.ul variants={variants} className={styles.close}>
+      <motion.li variants={variants2} className={styles.item}>
+        <div onClick={() => toggleOpen()} className={styles.close}>
+          <CloseSvg />
+        </div>
+      </motion.li>
+    </motion.ul>
+
+    <motion.ul variants={variants} className={styles.menu}>
+      {menuItems.map((item, i) => (
+        <MenuItem key={i} item={item} />
+      ))}
+    </motion.ul>
+  </>
+);

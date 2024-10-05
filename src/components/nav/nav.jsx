@@ -9,8 +9,12 @@ import { BracketSvg } from "../../assets/svg";
 import styles from "./nav.module.css";
 
 const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  open: (
+    size = window.innerWidth > window.innerHeight
+      ? window.innerWidth
+      : window.innerHeight
+  ) => ({
+    clipPath: `circle(${size < 2048 ? size * 1.5 : size * 2}px at 40px 40px)`,
     transition: {
       type: "spring",
       stiffness: 40,
@@ -39,7 +43,7 @@ export const Nav = () => {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}
-        className={styles.nav}
+        className={`${styles.nav} ${!isOpen && styles.closed}`}
         ref={containerRef}
       >
         <motion.div
@@ -48,17 +52,18 @@ export const Nav = () => {
           }`}
           variants={sidebar}
         />
-        <NavContent />
+        <NavContent toggleOpen={toggleOpen} />
       </motion.nav>
       <nav className={styles.nav}>
         <div className={styles.flex} onClick={() => toggleOpen()}>
-          <BracketSvg /> <span>menu</span>
+          <BracketSvg className={styles.bracket} /> <span>menu</span>
         </div>
         <Link to="/">
-          <img src="/logo.svg" alt="odisy" />
+          <img src="/logo.svg" alt="odisy" className={styles.logo} />
         </Link>
         <Link to="/contacts" className={styles.flex}>
-          <span>contact us</span> <BracketSvg className={styles.left} />
+          <span>contact us</span>{" "}
+          <BracketSvg className={styles.bracket + " " + styles.left} />
         </Link>
       </nav>
     </>

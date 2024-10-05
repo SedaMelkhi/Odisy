@@ -10,4 +10,5 @@
   bottom: 20px;
   left: 20px;
   letter-spacing: -0.05em;
+  z-index: 15;
 }
