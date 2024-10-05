@@ -37,7 +37,7 @@ export const Nav = () => {
     <nav className={styles.nav}>
       <motion.nav
         initial={false}
-        animate={isOpen ? "open" : "closed"}
+        animate={isOpen}
         custom={height}
         ref={containerRef}
       >

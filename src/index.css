@@ -67,33 +67,6 @@ nav {
   bottom: 0;
   width: 100%;
   background: #000;
-  transition: 0.8s;
-}
-
-.visible {
-  animation: open 0.8s 1 forwards;
-}
-
-.hidden {
-  animation: hidden 0.8s 1 forwards;
-}
-
-@keyframes hidden {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes open {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 button {
