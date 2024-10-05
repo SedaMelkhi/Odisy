@@ -37,14 +37,11 @@ export const Nav = () => {
     <nav className={styles.nav}>
       <motion.nav
         initial={false}
-        animate={isOpen}
+        animate={isOpen ? "open" : "closed"}
         custom={height}
         ref={containerRef}
       >
-        <motion.div
-          className={`background ${isOpen ? "visible" : "hidden"}`}
-          variants={sidebar}
-        />
+        <motion.div className={`background`} variants={sidebar} />
         <NavItems />
       </motion.nav>
       <div className={styles.flex} onClick={() => toggleOpen()}>
