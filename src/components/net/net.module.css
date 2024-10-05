@@ -38,10 +38,13 @@
   min-height: 387px;
   height: 35vh;
   display: flex;
+  position: relative;
+  top: -20px;
   flex-direction: column;
   justify-content: space-between;
   @media (min-width: 768px) {
     width: 42%;
+    top: 0px;
   }
 }
 

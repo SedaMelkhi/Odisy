@@ -7,6 +7,7 @@
 .logo {
   position: relative;
   z-index: 15;
+  left: 30px;
 }
 
 .flex {
