@@ -41,7 +41,10 @@ export const Nav = () => {
         custom={height}
         ref={containerRef}
       >
-        <motion.div className={`background`} variants={sidebar} />
+        <motion.div
+          className={`background ${isOpen ? "visible" : "hidden"}`}
+          variants={sidebar}
+        />
         <NavItems />
       </motion.nav>
       <div className={styles.flex} onClick={() => toggleOpen()}>
