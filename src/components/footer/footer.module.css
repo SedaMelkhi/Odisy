@@ -1,0 +1,13 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: calc(100% - 40px);
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  letter-spacing: -0.05em;
+}

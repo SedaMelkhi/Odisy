@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.left {
+  transform: rotate(180deg);
+  margin-left: 2px;
+}
