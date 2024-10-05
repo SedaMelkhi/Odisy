@@ -71,12 +71,10 @@ nav {
 }
 
 .visible {
-  opacity: 0;
   animation: open 0.8s 1 forwards;
 }
 
 .hidden {
-  opacity: 1;
   animation: hidden 0.8s 1 forwards;
 }
 
