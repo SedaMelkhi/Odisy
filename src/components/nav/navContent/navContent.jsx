@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { MenuItem } from "./menuItem";
+import { MenuItem } from "../menuItem/menuItem";
+
+import styles from "./NavContent.module.css";
 
 const variants = {
   open: {
@@ -10,8 +12,8 @@ const variants = {
   },
 };
 
-export const NavItems = () => (
-  <motion.ul variants={variants}>
+export const NavContent = () => (
+  <motion.ul variants={variants} className={styles.menu}>
     {itemIds.map((i) => (
       <MenuItem i={i} key={i} />
     ))}

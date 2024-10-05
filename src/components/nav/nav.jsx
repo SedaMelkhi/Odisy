@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-dimensions";
-import { NavItems } from "./navItems";
+import { NavContent } from "./navContent/navContent";
 
 import { BracketSvg } from "../../assets/svg";
 
@@ -13,15 +13,15 @@ const sidebar = {
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
       type: "spring",
-      stiffness: 30,
+      stiffness: 40,
       restDelta: 2,
     },
   }),
   closed: {
-    clipPath: "circle(0 at 40px 40px)",
+    clipPath: "",
     transition: {
       type: "spring",
-      stiffness: 400,
+      stiffness: 600,
       damping: 40,
     },
   },
@@ -34,28 +34,33 @@ export const Nav = () => {
   console.log(isOpen);
 
   return (
-    <nav className={styles.nav}>
+    <>
       <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}
+        className={styles.nav}
         ref={containerRef}
       >
         <motion.div
-          className={`background ${isOpen ? "visible" : "hidden"}`}
+          className={`${styles.background} ${
+            isOpen ? styles.visible : styles.hidden
+          }`}
           variants={sidebar}
         />
-        <NavItems />
+        <NavContent />
       </motion.nav>
-      <div className={styles.flex} onClick={() => toggleOpen()}>
-        <BracketSvg /> <span>menu</span>
-      </div>
-      <Link to="/">
-        <img src="/logo.svg" alt="odisy" />
-      </Link>
-      <Link to="/contacts" className={styles.flex}>
-        <span>contact us</span> <BracketSvg className={styles.left} />
-      </Link>
-    </nav>
+      <nav className={styles.nav}>
+        <div className={styles.flex} onClick={() => toggleOpen()}>
+          <BracketSvg /> <span>menu</span>
+        </div>
+        <Link to="/">
+          <img src="/logo.svg" alt="odisy" />
+        </Link>
+        <Link to="/contacts" className={styles.flex}>
+          <span>contact us</span> <BracketSvg className={styles.left} />
+        </Link>
+      </nav>
+    </>
   );
 };
