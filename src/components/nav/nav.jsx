@@ -39,6 +39,18 @@ export const Nav = () => {
 
   return (
     <>
+      <nav className={styles.nav}>
+        <div className={styles.flex} onClick={() => toggleOpen()}>
+          <BracketSvg className={styles.bracket} /> <span>menu</span>
+        </div>
+        <Link to="/">
+          <img src="/logo.svg" alt="odisy" className={styles.logo} />
+        </Link>
+        <Link to="/contacts" className={styles.flex}>
+          <span>contact us</span>{" "}
+          <BracketSvg className={styles.bracket + " " + styles.left} />
+        </Link>
+      </nav>
       <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
@@ -54,18 +66,6 @@ export const Nav = () => {
         />
         <NavContent toggleOpen={toggleOpen} />
       </motion.nav>
-      <nav className={styles.nav}>
-        <div className={styles.flex} onClick={() => toggleOpen()}>
-          <BracketSvg className={styles.bracket} /> <span>menu</span>
-        </div>
-        <Link to="/">
-          <img src="/logo.svg" alt="odisy" className={styles.logo} />
-        </Link>
-        <Link to="/contacts" className={styles.flex}>
-          <span>contact us</span>{" "}
-          <BracketSvg className={styles.bracket + " " + styles.left} />
-        </Link>
-      </nav>
     </>
   );
 };

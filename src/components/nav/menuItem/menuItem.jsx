@@ -21,10 +21,10 @@ const variants = {
   },
 };
 
-export const MenuItem = ({ item }) => {
+export const MenuItem = ({ item, toggleOpen }) => {
   return (
     <motion.li variants={variants} className={styles.item}>
-      <Link to={item.link} className={styles.flex}>
+      <Link to={item.link} className={styles.flex} onClick={toggleOpen}>
         <BracketSvg />
         <span>{item.text}</span>
         <BracketSvg className={styles.right} />

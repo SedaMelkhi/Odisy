@@ -40,15 +40,15 @@ const menuItems = [
   },
   {
     text: "Doc",
-    link: "/doc",
+    link: "/soon",
   },
   {
     text: "Creative",
-    link: "/creative",
+    link: "/soon",
   },
   {
     text: "Education",
-    link: "/education",
+    link: "/soon",
   },
   {
     text: "Contacts",
@@ -68,7 +68,7 @@ export const NavContent = ({ toggleOpen }) => (
 
     <motion.ul variants={variants} className={styles.menu}>
       {menuItems.map((item, i) => (
-        <MenuItem key={i} item={item} />
+        <MenuItem key={i} item={item} toggleOpen={toggleOpen} />
       ))}
     </motion.ul>
   </>

@@ -2,12 +2,21 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 20px;
+  padding: 0 20px;
+  z-index: 6;
 }
 
 .logo {
-  position: relative;
-  z-index: 15;
+  position: fixed;
+  z-index: 10;
   left: 25px;
+  left: 3px;
+  right: 0;
+  margin: 0 auto;
 }
 
 .flex {
@@ -60,9 +69,11 @@
 
 .background {
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 0;
   bottom: 0;
+  z-index: 3;
+  min-height: 100vh;
   width: 100%;
   background: #000;
 }
