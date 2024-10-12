@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { FeaturesPage, HomePage, SoonPage } from "./pages";
+import { CommercialsPage, HiddenGardenPage, HomePage, SoonPage } from "./pages";
 import { Nav } from "./components";
 
 const App = () => {
@@ -9,7 +9,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/soon" element={<SoonPage />} />
-        <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/*" element={<SoonPage />} />
+        <Route path="/commercials" element={<CommercialsPage />} />
+        <Route path="/hidden_garden" element={<HiddenGardenPage />} />
       </Routes>
     </div>
   );

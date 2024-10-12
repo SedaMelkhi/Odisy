@@ -36,7 +36,7 @@ const menuItems = [
   },
   {
     text: "Features",
-    link: "/features",
+    link: "/soon",
   },
   {
     text: "Doc",
