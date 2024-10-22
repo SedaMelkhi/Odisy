@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Helvetica";
-  src: url("./fonts/HelveticaNeueCyr-Medium.woff2");
+  src: url("/fonts/HelveticaNeueCyr-Medium.woff2");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Helvetica";
-  src: url("./fonts/HelveticaNeueCyr-Roman.woff2");
+  src: url("/fonts/HelveticaNeueCyr-Roman.woff2");
   font-style: normal;
   font-weight: 400;
 }
