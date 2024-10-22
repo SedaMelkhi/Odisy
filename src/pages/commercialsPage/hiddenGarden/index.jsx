@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { SmallBracketSvg } from "../../../assets/svg";
+import { SmallBracketLeftSvg } from "../../../assets/svg";
 import { Footer, Net } from "../../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { ProjectService } from "../../../services";
@@ -106,9 +106,9 @@ export const HiddenGarden = ({ setIsOpen, isOpen, close }) => {
               </div>
             </div>
             <div className={styles.link} onClick={checkCode}>
-              <SmallBracketSvg />
+              <SmallBracketLeftSvg />
               <span>enter code</span>
-              <SmallBracketSvg className={styles.left} />
+              <SmallBracketLeftSvg className={styles.left} />
             </div>
           </div>
         </div>

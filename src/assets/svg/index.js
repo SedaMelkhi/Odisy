@@ -4,4 +4,5 @@ export { CloseSvg } from "./closeSvg";
 export { LineSvg } from "./lineSvg";
 export { PlaySvg } from "./playSvg";
 export { PauseSvg } from "./pauseSvg";
-export { SmallBracketSvg } from "./smallBracketSvg";
+export { SmallBracketLeftSvg } from "./SmallBracketSvg";
+export { SmallBracketRightSvg } from "./SmallBracketSvg";
