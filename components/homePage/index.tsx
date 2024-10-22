@@ -1,0 +1,17 @@
+export { StoreName } from "./storeName";
+export { HeaderHome } from "./headerHome";
+export { Networks } from "./networks";
+export { Banner } from "./banner";
+export { Categories } from "./categories";
+export { Description } from "./description";
+export { Products } from "./products";
+export { Text } from "./text";
+export { Examples } from "./examples";
+export { Reviews } from "./reviews";
+export { Services } from "./services";
+export { CategoriesFooter } from "./categoriesFooter";
+export { Form } from "./form";
+export { ServicesMobile } from "./servicesMobile";
+export { CategoriesSlider } from "./categoriesSlider";
+export { FormLeft } from "./formLeft";
+export { FormRight } from "./formRight";
