@@ -1,0 +1,12 @@
+.bg {
+  background-color: #000;
+  min-height: 100dvh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: 1240px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

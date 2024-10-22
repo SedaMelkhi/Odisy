@@ -1,0 +1,126 @@
+@media (hover: hover) and (pointer: fine) {
+  .col:hover {
+    background-color: #fff;
+    color: #000;
+
+    .number {
+      color: #000;
+
+      path {
+        fill: #000;
+      }
+    }
+
+    .marker {
+      background-color: #000;
+    }
+
+    .name {
+      path {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  .col:hover .animated_bg {
+    opacity: 1;
+  }
+}
+
+.col {
+  padding: 20px;
+  cursor: pointer;
+  border-right: 1px solid #191919;
+  border-bottom: 1px solid #191919;
+  transition: 0.5s linear background-color;
+  color: #fff;
+  background-color: #000;
+  &:nth-child(2n) {
+    border-right: none;
+  }
+  .number svg {
+    width: 3px;
+  }
+  .name {
+    svg {
+      position: relative;
+      top: -12px;
+    }
+    path {
+      transition: 0.6s linear;
+      stroke-dashoffset: 383;
+      stroke-dasharray: 383;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.05em;
+  color: #a9a9a9;
+  height: 15px;
+}
+
+.left {
+  transform: rotate(180deg) translateX(-1px);
+}
+
+.marker {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #a9a9a9;
+}
+
+.project {
+  max-width: 503px;
+  margin: 10px auto 0;
+  @media (min-width: 1240px) {
+    margin: 135px auto;
+  }
+  @media (min-width: 768px) {
+    margin: 85px auto;
+  }
+}
+
+.image {
+  height: 192px;
+  margin-bottom: 10px;
+  position: relative;
+  background: center/cover no-repeat;
+  @media (min-width: 768px) {
+    height: 282px;
+  }
+}
+
+.name {
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.05em;
+}
+
+.animated_bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  background-color: black;
+}
+
+.visible {
+  opacity: 1;
+}

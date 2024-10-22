@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/HelveticaNeueCyr-Medium.woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/HelveticaNeueCyr-Roman.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Helvetica", sans-serif;
+  color: #fff;
+  line-height: 100%;
+  background-color: #000;
+}
+/* Стили для всей полосы прокрутки */
+::-webkit-scrollbar {
+  width: 12px; /* Ширина вертикального скроллбара */
+  height: 12px; /* Высота горизонтального скроллбара */
+}
+
+/* Стили для бегунка (ползунка) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Цвет бегунка */
+  border-radius: 6px; /* Закругление углов бегунка */
+  border: 3px solid #000; /* Пространство между бегунком и краем полосы прокрутки */
+}
+
+/* Стили для области прокрутки, когда мышь на бегунке */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Цвет бегунка при наведении */
+}
+
+/* Стили для трека (фона) скроллбара */
+::-webkit-scrollbar-track {
+  background: #000; /* Цвет фона полосы прокрутки */
+  border-radius: 10px; /* Закругленные края */
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+button,
+input {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  padding: 20px;
+}
+
+.scroll {
+  overflow-y: scroll;
+}

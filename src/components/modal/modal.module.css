@@ -1,0 +1,61 @@
+.modal {
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 1000;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 5;
+  rect {
+    transition: 0.2s;
+  }
+  &:hover {
+    rect {
+      stroke-opacity: 1;
+    }
+  }
+  svg {
+    width: 64px;
+    height: 64px;
+    @media (min-width: 768px) {
+      width: 102px;
+      height: 102px;
+    }
+  }
+}
+
+.play {
+  position: absolute;
+  z-index: 5;
+  width: 64px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 120px;
+  cursor: pointer;
+  transition: 0.2s;
+  @media (min-width: 768px) {
+    width: 120px;
+    bottom: 20px;
+  }
+  rect {
+    transition: 0.2s;
+  }
+  &:hover {
+    transform: scale(1.05);
+    rect {
+      stroke-opacity: 1;
+    }
+  }
+  svg {
+    width: 100%;
+  }
+}
