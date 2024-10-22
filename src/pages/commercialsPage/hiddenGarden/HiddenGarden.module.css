@@ -1,5 +1,5 @@
 .bg_container {
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh;
   width: 100%;
   background: rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(30px);
@@ -31,12 +31,12 @@
   background-color: black;
 }
 .bg_img {
-  background: url("/bg.png") center/cover no-repeat;
+  background: url("/bg.png") center/cover no-repeat #000;
   transition: 0.5s ease-in-out;
   position: fixed;
   z-index: 2;
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh;
   top: 0;
   transform: translateY(-100dvh);
 }
@@ -101,30 +101,29 @@
   }
 }
 
+.link svg {
+  transition: 0.2s;
+}
+
+.left {
+  transform: rotate(180deg) translate(-1px, 1px);
+}
+
 .link {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1px;
-  opacity: 0px;
   text-transform: uppercase;
   cursor: pointer;
-  svg {
-    width: 3px;
-    transition: 0.2s;
-  }
   &:hover {
     svg:first-child {
       transform: translateX(-4px);
     }
     svg:last-child {
-      transform: rotate(180deg) translate(-5px, 1px);
+      transform: rotate(180deg) translateX(-5px);
     }
   }
-}
-
-.left {
-  transform: rotate(180deg) translate(-1px, 1px);
 }
 
 .codes {

@@ -11,7 +11,7 @@
 .bg_container {
   position: relative;
   width: 100%;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,6 @@
   font-size: 48px;
   line-height: 48px;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
   margin-bottom: 40px;
 }
 
@@ -63,9 +62,6 @@
   color: #ffffff80;
   text-transform: uppercase;
   margin-bottom: 8px;
-  svg {
-    width: 3px;
-  }
 }
 
 .contact {

@@ -24,6 +24,9 @@ body {
   line-height: 100%;
   background-color: #000;
 }
+svg {
+  will-change: transform;
+}
 /* Стили для всей полосы прокрутки */
 ::-webkit-scrollbar {
   width: 12px; /* Ширина вертикального скроллбара */

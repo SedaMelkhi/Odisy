@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import { BracketSvg } from "../../../assets/svg";
+import { SmallBracketSvg } from "../../../assets/svg";
 import { Footer, Net } from "../../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { ProjectService } from "../../../services";
 import { useNavigate } from "react-router-dom";
+import { setPinCode } from "../../../redux/pinCodeSlice/pinCodeSlice";
 
 import styles from "./HiddenGarden.module.css";
-import { setPinCode } from "../../../redux/pinCodeSlice/pinCodeSlice";
 
 export const HiddenGarden = ({ setIsOpen, isOpen, close }) => {
   const [code, setCode] = useState(["", "", "", ""]);
@@ -106,9 +106,9 @@ export const HiddenGarden = ({ setIsOpen, isOpen, close }) => {
               </div>
             </div>
             <div className={styles.link} onClick={checkCode}>
-              <BracketSvg />
+              <SmallBracketSvg />
               <span>enter code</span>
-              <BracketSvg className={styles.left} />
+              <SmallBracketSvg className={styles.left} />
             </div>
           </div>
         </div>

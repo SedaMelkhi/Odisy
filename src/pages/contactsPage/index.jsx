@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Net, Footer } from "../../components";
 import { ContactsService } from "../../services";
-import { BracketSvg } from "../../assets/svg";
+import { SmallBracketSvg, BracketSvg } from "../../assets/svg";
 import { Link } from "react-router-dom";
 
 import styles from "./contactsPage.module.css";
@@ -25,9 +25,9 @@ export const ContactsPage = () => {
         </h1>
         <div className={styles.item}>
           <div className={styles.name}>
-            <BracketSvg />
+            <SmallBracketSvg />
             <span>Contact</span>
-            <BracketSvg className={styles.left} />
+            <SmallBracketSvg className={styles.left} />
           </div>
           <div className={styles.contact}>
             {contacts ? (
@@ -48,9 +48,9 @@ export const ContactsPage = () => {
         </div>
         <div className={styles.item}>
           <div className={styles.name}>
-            <BracketSvg />
+            <SmallBracketSvg />
             <span>Social media</span>
-            <BracketSvg className={styles.left} />
+            <SmallBracketSvg className={styles.left} />
           </div>
           {contacts && contacts.instagram_link && (
             <div className={styles.contact}>
@@ -74,9 +74,9 @@ export const ContactsPage = () => {
         </div>
         <div className={styles.item}>
           <div className={styles.name}>
-            <BracketSvg />
+            <SmallBracketSvg />
             <span>office</span>
-            <BracketSvg className={styles.left} />
+            <SmallBracketSvg className={styles.left} />
           </div>
           <div className={styles.contact}>
             {contacts ? contacts.address : "..."}
